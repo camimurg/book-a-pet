@@ -5,3 +5,10 @@
 <p> <%= @pet.city %> </p>
 <p> <%= @pet.description %> </p>
 
+<%= simple_form_for([@pet, @appointment]) do |f| %>
+  <%= f.input :date %>
+  <%= f.input :time %>
+  <%= f.input :message %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
+
