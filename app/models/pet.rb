@@ -1,5 +1,5 @@
 class Pet < ApplicationRecord
-  has_many :appointments
+  has_many :appointments, dependent: :destroy
   belongs_to :user
   SPECIES = ["dog", "cat", "fish", "hamster", "bird"]
   validates :name, presence: true
