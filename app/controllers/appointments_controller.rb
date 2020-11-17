@@ -1,23 +1,19 @@
 class AppointmentsController < ApplicationController
-  def index
-    @appointments = Appointment.all
+
+  def show
+    @appointment = Appointment.find(params[:id])
+    @pet = Pet.find(params[:pet_id])
   end
 
   def create
     @pet = Pet.find(params[:pet_id])
     @appointment = Appointment.new(appointment_params)
-    @appointment.pet = @pet
+    @appointment.pet_id = @pet.id
     if @appointment.save
-      redirect_to @pet
+      redirect_to @appointment
     else
-      render "appointments/show"
+      render "pets/show"
     end
-  end
-
-  def destroy
-    @appointment = Appointment.find(params[:id])
-    @appointment.destroy
-    redirect_to pets_path
   end
 
   private
