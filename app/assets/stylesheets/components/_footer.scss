@@ -1,13 +1,26 @@
-.footer-wrapper {
+.footer {
+  background: #FFF5CC;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
+  height: 100px;
+  padding: 0px 50px;
+  font-size: 18px;
 }
 
-.footer-copyright {
-  height: 100px;
-  background: cadetblue;
-  width: 100%;
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  color: black;
+  opacity: 0.50;
+  text-decoration: none;
+  padding: 0px 10px;
+}
+
+.footer-links a:hover {
+  opacity: 1;
 }
