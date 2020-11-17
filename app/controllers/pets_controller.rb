@@ -7,6 +7,7 @@ class PetsController < ApplicationController
 
   def show
     @pet = Pet.find(params[:id])
+    @appointment = Appointment.new
   end
 
   def new
@@ -16,7 +17,7 @@ class PetsController < ApplicationController
   def create
     @pet = Pet.new(pet_params)
     @pet.user = current_user
-    if @pet.save!
+    if @pet.save
       redirect_to pet_path(@pet), notice: "Pet added"
     else
       render :new
