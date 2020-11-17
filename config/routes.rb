@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :pets, only: [:index, :show, :create, :new] do
     resources :appointments, only: [:create]
   end
-
   resources :appointments, only: [:index, :show, :destroy]
 end
 
