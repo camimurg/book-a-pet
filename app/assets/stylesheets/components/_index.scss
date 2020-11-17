@@ -3,3 +3,9 @@
 @import "avatar";
 @import "navbar";
 @import "footer";
+@import "card";
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
