@@ -1,5 +1,38 @@
 
 <h1>All our pets</h1>
+<div class="container">
+  <div class="card" style="width: 288px;">
+    <img class="card-img-top" src="#" alt="Card image">
+    <div class="card-body">
+      <p class="card-title"> pets name</p>
+      <p class="card-text">Species</p>
+      <p class="card-text"> rating</p>
+      <p class="card-text">date</p>
+    </div>
+  </div>
+  <div class="card" style="width: 288px;">
+    <img class="card-img-top" src="#" alt="Card image">
+    <div class="card-body">
+      <p class="card-title"> pets name</p>
+      <div class="card-box">
+        <p class="card-text">Pet Species </p>
+        <p class="card-text"> rating</p>
+        <p class="card-text">date</p>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="width: 288px;">
+    <img class="card-img-top" src="#" alt="Card image">
+    <div class="card-body">
+      <p class="card-title"> pets name</p>
+      <p class="card-text">Species</p>
+      <p class="card-text"> rating</p>
+      <p class="card-text">date</p>
+    </div>
+  </div>
+</div>
+
+
 
 <% @pets.each do |pet| %>
   <h3> <%= link_to pet.name, pet_path(pet) %> </h3>
