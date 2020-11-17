@@ -15,11 +15,12 @@ class AppointmentsController < ApplicationController
   end
 
   def create
-    @pet = Pet.find(params[:pet_id])
     @appointment = Appointment.new(appointment_params)
-    @appointment.pet_id = @pet.id
+    @appointment.user = current_user
+    @pet = Pet.find(params[:pet_id])
+    @appointment.pet = @pet
     if @appointment.save
-      redirect_to @appointment
+      redirect_to appointments_path
     else
       render "pets/show"
     end

@@ -2,7 +2,7 @@
 
 <% @appointments.each do |appointment| %>
   <%= appointment.pet.name %>
-  <%= link_to, "Delete", appointment_path(appointment), method: :delete %>
+  <%= link_to "Delete", appointment_path(appointment), method: :delete %>
 <% end %>
 
 
