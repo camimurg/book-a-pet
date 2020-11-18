@@ -17,7 +17,7 @@ puts "Users created"
 
 puts "Creating pets"
 
-Pet.create!(name: "Feijao", species: "cat", address: "Prenz Allee 6", city: "Berlin", description: "I am a very lovely and playful black cat. Come play with me! I will jump in your keyboard!", user: user1)
+Pet.create!(name: "Feijao", species: "Dog", address: "Prenz Allee 6", city: "Berlin", description: "I am a very lovely and playful crazy dog. Come play with me! I will jump in your keyboard!", user_id: user1, image: "https://picsum.photos/id/237/200/300")
 
 puts "Pets created"
 
