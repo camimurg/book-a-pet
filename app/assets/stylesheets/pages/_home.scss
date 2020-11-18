@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap');
+
+.main-container {
+  max-width: 700px;
+  background-color: rgba(255, 255, 255, 0.70);
+  font-family: 'Rufina', serif;
+  margin: 30px auto;
+  border-radius: 30px;
+}
+
+.description {
+  text-align: center;
+  margin: 20px 0;
+  padding: 30px;
+}
+
+h1 {
+  font-family: 'Rufina', serif;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+
+.flex-container {
+  text-align: center;
+  display: flex;
+  margin: 20px 0;
+}
+
+.flex-items {
+  flex-direction: row;
+  flex: 1 1 100px;
+  justify-content: space-around;
+  padding: 0 10px;
+}
+
+.btn {
+  background-color: #659157;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  padding: 20px 50px;
+  font-size: 24;
+  font-size: 18px;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
