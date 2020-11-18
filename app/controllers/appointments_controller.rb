@@ -11,7 +11,7 @@ class AppointmentsController < ApplicationController
 
   def show
     @appointment = Appointment.find(params[:id])
-    @pet = Pet.find(params[:pet_id])
+    # @pet = Pet.find(params[:pet_id])
   end
 
   def create
@@ -29,6 +29,6 @@ class AppointmentsController < ApplicationController
   private
 
   def appointment_params
-    params.require(:appointment).permit(:date, :time, :message)
+    params.require(:appointment).permit(:date, :start_time, :end_time, :message)
   end
 end

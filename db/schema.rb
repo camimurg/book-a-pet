@@ -38,12 +38,13 @@ ActiveRecord::Schema.define(version: 2020_11_18_105403) do
 
   create_table "appointments", force: :cascade do |t|
     t.date "date"
-    t.time "time"
+    t.time "start_time"
     t.string "message"
     t.bigint "pet_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.time "end_time"
     t.index ["pet_id"], name: "index_appointments_on_pet_id"
     t.index ["user_id"], name: "index_appointments_on_user_id"
   end

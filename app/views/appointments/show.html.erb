@@ -1,1 +1,4 @@
-<h2>Appointment with <%= @pet.name %> </h2>
+<h2>Appointment with <%= @appointment.pet.name %> </h2>
+<p> <%= @appointment.pet.description %> </p>
+<p> <%= @appointment.pet.address %> </p>
+<p> From <%= @appointment.start_time.strftime('%H:%M') %> to <%= @appointment.end_time.strftime('%H:%M') %> </p>

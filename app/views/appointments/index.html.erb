@@ -2,7 +2,15 @@
 
 <% @appointments.each do |appointment| %>
   <%= appointment.pet.name %>
+  <br>
+  <%= appointment.date.to_s(:long_ordinal) %>
+  <br>
+  <%= appointment.start_time.strftime('%H:%M') %>
+  <br>
+  <%= link_to "View", appointment_path(appointment) %>
+  <br>
   <%= link_to "Delete", appointment_path(appointment), method: :delete %>
+  <br>
 <% end %>
 
 
