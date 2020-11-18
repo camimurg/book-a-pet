@@ -1,16 +1,18 @@
 
 <h1>All our pets</h1>
 <div class="container">
-  <div class="card" style="width: 288px;">
-    <img class="card-img-top" src="#" alt="Card image">
-    <div class="card-body">
-      <p class="card-title"> pets name</p>
-      <p class="card-text">Species</p>
-      <p class="card-text"> rating</p>
-      <p class="card-text">date</p>
+  <% @pets.each do |pet| %>
+    <div class="card" style="width: 288px;">
+      <img class="card-img-top" src="#" alt="Card image">
+      <div class="card-body">
+        <h3> <%=  pet.name %></h3>
+        <p class="card-text"> <%= pet.species %> </p>
+        <p class="card-text"> <%= pet.city %> </p>
+      </div>
+      <%= link_to "", pet_path(pet), class: 'card-link' %>
     </div>
-  </div>
-  <div class="card" style="width: 288px;">
+  <% end %>
+ <!--  <div class="card" style="width: 288px;">
     <img class="card-img-top" src="#" alt="Card image">
     <div class="card-body">
       <p class="card-title"> pets name</p>
@@ -28,9 +30,8 @@
       <p class="card-text">Species</p>
       <p class="card-text"> rating</p>
       <p class="card-text">date</p>
-      <!-- hey -->
     </div>
-  </div>
+  </div> -->
 </div>
 
 
