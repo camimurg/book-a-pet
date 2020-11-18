@@ -1,7 +1,7 @@
 class Pet < ApplicationRecord
   has_many :appointments, dependent: :destroy
   belongs_to :user
-  SPECIES = ["dog", "cat", "fish", "hamster", "bird"]
+  SPECIES = ["Dog", "Cat", "Fish", "Hamster", "Bird", "Snake", "Frog"]
   validates :name, presence: true
   validates :species, presence: true, inclusion: { in: SPECIES }
   validates :address, presence: true
