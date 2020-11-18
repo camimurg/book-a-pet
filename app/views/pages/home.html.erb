@@ -1,0 +1,51 @@
+<section class="main-container">
+  <div class="description">
+    <h1>You cannot have an animal but would like to spend some time with them?
+    </h1>
+  </div>
+
+  <div class="flex-container">
+    <div class="flex-items">
+      <%= image_tag("cat.png", :alt => "cat") %>
+      <p class= "pt-2">Choose a pet</p>
+    </div>
+    <div class="flex-items">
+       <%= image_tag("chat.png", :alt => "chat") %>
+       <p class= "pt-2">Reach the owner</p>
+    </div>
+    <div class="flex-items">
+       <%= image_tag("hugging-dog.png", :alt => "hugging dog") %>
+       <p class= "pt-2">Set up your <br> snuggle session</p>
+    </div>
+  </div>
+</section>
+
+  <div class="btn-wrapper">
+  <%= link_to 'Find a pet', pets_path, :class => "btn" %>
+  </div>
+
+<section class="main-container">
+  <div class="description">
+    <h1>You don’t have enough time to play with your pet?
+    </h1>
+  </div>
+
+  <div class="flex-container">
+    <div class="flex-items">
+      <%= image_tag("glass.png", :alt => "search") %>
+      <p class= "pt-2">Find a local pet lover</p>
+    </div>
+    <div class="flex-items">
+       <%= image_tag("chat.png", :alt => "chat") %>
+       <p class= "pt-2">Get in touch</p>
+    </div>
+    <div class="flex-items">
+       <%= image_tag("pets.png", :alt => "pets") %>
+       <p class= "pt-2">Share your pet</p>
+    </div>
+  </div>
+</section>
+
+  <div class="btn-wrapper pb-5">
+    <%= link_to 'Share your pet', new_pet_path, :class => "btn" %>
+  </div>
