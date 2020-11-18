@@ -6,7 +6,11 @@
 
   <% @pets.each do |pet| %>
     <div class="card" style="width: 288px;">
-      <img class="card-img-top" src="#" alt="Card image">
+      <div>
+        <% if pet.picture.attached? %>
+          <%= cl_image_tag pet.picture.key, height: 300, width: 400, crop: :fill %>
+        <% end %>
+      </div>
       <div class="card-body">
         <h3> <%=  pet.name %></h3>
         <p class="card-text"> <%= pet.species %> </p>
@@ -20,8 +24,4 @@
     <%= link_to "Add your pet", new_pet_path %>
   </div>
 </div>
-
-
-
-
 
