@@ -4,8 +4,13 @@
 @import "navbar";
 @import "footer";
 @import "card";
+@import "link";
 
 .container {
   display: flex;
   justify-content: space-evenly;
+}
+
+.container-title {
+  justify-content: center;
 }
