@@ -3,14 +3,8 @@
 @import "avatar";
 @import "navbar";
 @import "footer";
-@import "card";
-@import "link";
+@import "banner";
 
-.container {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.container-title {
-  justify-content: center;
+body {
+  background-color: #FFDE5E;
 }

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-family: 'Rock Salt', cursive;
+  font-size: 36px;
+  text-align: center;
+}
+
+.search-bar {
+  background: white;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-self: center;
+  align-self: center;
+  margin: auto;
+  margin-top: 20px;
+  padding: 8px;
+  border-radius: 50px;
+}
+
+.box {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.box1, .box2 {
+  border-right: 2px solid black;
+}
+
