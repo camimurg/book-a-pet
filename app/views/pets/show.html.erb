@@ -5,6 +5,11 @@
 <p> <%= @pet.city %> </p>
 <p> <%= @pet.description %> </p>
 
+<% if @pet.picture.attached? %>
+  <%= cl_image_tag @pet.picture.key, height: 300, width: 400, crop: :fill %>
+<% end  %>
+
+
 <%= simple_form_for([@pet, @appointment]) do |f| %>
   <%= f.input :date %>
   <%= f.input :time %>
