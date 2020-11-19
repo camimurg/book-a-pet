@@ -13,8 +13,10 @@
       </div>
       <div class="card-body">
         <h3> <%=  pet.name %></h3>
-        <p class="card-text">Species: <%= pet.species %> </p>
-        <p class="card-text">City: <%= pet.city %> </p>
+        <div>
+          <p class="card-text">Species: <%= pet.species %> </p>
+          <p class="card-text">City: <%= pet.city %> </p>
+        </div>
       </div>
       <%= link_to "", pet_path(pet), class: 'card-link' %>
     </div>
