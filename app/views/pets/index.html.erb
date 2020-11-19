@@ -6,7 +6,7 @@
 
   <% @pets.each do |pet| %>
     <div class="card" style="width: 288px;">
-      <div>
+      <div class="card-image-pet">
         <% if pet.picture.attached? %>
           <%= cl_image_tag pet.picture.key, height: 200, width: 200, crop: :fill %>
         <% end %>
@@ -20,6 +20,10 @@
     </div>
   <% end %>
   <!-- container -->
+
+  <div class="link">
+    <%= link_to "Add your pet", new_pet_path %>  </div>
+</div>
 
 </div>
 <div class="btn">
