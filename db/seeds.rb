@@ -5,19 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
 
-User.destroy_all
+Appointment.destroy_all
 Pet.destroy_all
+User.destroy_all
+
 
 puts "Creating users"
 
-user1 = User.create!(email: "pa@gmail.com", password: "123456")
+user1 = User.create!(email: "pato@gmail.com", password: "123456")
 
 puts "Users created"
 
 puts "Creating pets"
 
-Pet.create!(name: "Feijao", species: "Dog", address: "Prenz Allee 6", city: "Berlin", description: "I am a very lovely and playful crazy dog. Come play with me! I will jump in your keyboard!", user_id: user1, image: "https://picsum.photos/id/237/200/300")
+pet = Pet.create!(name: "Feijao", species: "Dog", address: "Prenz Allee 6", city: "Berlin", description: "I am a very lovely and playful crazy dog. Come play with me! I will jump in your keyboard!", user: user1)
+
+picture = URI.open("https://picsum.photos/id/237/200/300")
+pet.picture.attach(io: picture, filename: "Picture.jpeg", content_type: "image/jpeg")
 
 puts "Pets created"
 
