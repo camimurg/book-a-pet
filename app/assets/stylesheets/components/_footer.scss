@@ -1,5 +1,14 @@
+.footer-container {
+  display: block;
+  // position: fixed;
+  bottom: 0px;
+  // left: 0px;
+  // right: 0px;
+  margin-bottom: 0px;
+}
+
 .footer {
-  background: #FFF5CC;
+  background-color: #FFF5CC;
   display: flex;
   align-items: center;
   justify-content: space-between;
