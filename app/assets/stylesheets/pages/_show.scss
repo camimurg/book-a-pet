@@ -2,36 +2,69 @@
   font-family: "Rufina";
 }
 
-// .pet-flex {
-//   display: flex;
-//   justify-content: space-between;
-// }
+.pet-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 .appointment-form {
   margin-top: 16px;
-  font-size: 15px;
+  padding: 12px;
+  font-size: 12px;
   font-family: "Rufina";
   margin-bottom: 16px;
+  background-color: white;
+  box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.5);
+  width: 500px;
+  border-radius: 10px;
+   justify-content: center;
 }
 
-.pet-information {
-  margin-top: 16px;
-  margin-bottom: 16px;
-  display: flex;
-  justify-content: flex-start;
-  font-family: "Rufina";
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  padding-right: 8px;
+.appointment-form h3 {
+  font-size: 16px;
+
 }
 
 .pet-text {
+  margin-left: 16px;
+}
+
+.pet-information {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Rufina";
+  border-radius: 10px;
+  padding-right: 8px;
+  line-height: 1;
   margin-left: 20px;
   margin-top: 10px;
 }
 
+.pet-information h3 {
+  font-family: "Poppins";
+}
+
+.pet-information em {
+  font-family: "Poppins";
+  font-size: 20px;
+}
+
 .pet-pic {
-  border-radius: 10px;
+  border-style: solid;
+  border-width: 16px;
+  border-color: rgba(251, 215, 74, 0.9);
+  border-radius: 3px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 16px;
 }
 
 .back {
@@ -40,7 +73,10 @@
   font-family: "Rufina";
 }
 
-.btn {
+.btn-block {
   background-color: #659157;
   color: white;
+  padding: 8px;
+  font-size: 16px;
+
 }
