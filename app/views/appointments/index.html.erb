@@ -2,7 +2,7 @@
   <h2>All your appointments</h2>
   <div class="container-main">
     <div class="card-product">
-    <% @appointments.each do |appointment| %>
+      <% @appointments.each do |appointment| %>
       <div class="card-appointment" >
       <!-- <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" /> -->
         <h3> <%= appointment.pet.name %> </h3>
@@ -17,10 +17,9 @@
           <%= link_to "Delete", appointment_path(appointment), method: :delete %>
         </div>
       </div>
-    <% end %>
-
+     <% end %>
+    </div>
   </div>
-</div>
 </div>
 
 
