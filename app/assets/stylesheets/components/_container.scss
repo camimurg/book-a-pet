@@ -2,6 +2,7 @@
   display: flex;
   font-family: "Rufina";
   justify-content: center;
+  flex-wrap: wrap
 
 }
 
@@ -22,4 +23,8 @@
   margin: 0px;
   width: 100%;
 
+}
+.container-title h2 {
+  font-family: "Rufina";
+  text-align: center;
 }

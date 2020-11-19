@@ -8,12 +8,12 @@
 }
 
 .footer {
-  background-color: #FFF5CC;
+  background-color: rgba(251, 215, 74, 0.8);
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 100px;
+  height: 80px;
   padding: 0px 50px;
   font-size: 18px;
 }
@@ -21,6 +21,7 @@
 .footer-links {
   display: flex;
   align-items: center;
+  font-family: 'Rufina', sans-serif;
 }
 
 .footer-links a {
@@ -33,3 +34,4 @@
 .footer-links a:hover {
   opacity: 1;
 }
+
