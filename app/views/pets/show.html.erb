@@ -1,31 +1,29 @@
 <div class="container">
-  <div class="pet-flex">
-    <div class="pet-information">
-      <div class="pet-pic">
-        <% if @pet.picture.attached? %>
-          <%= cl_image_tag @pet.picture.key, height: 300, width: 250, crop: :fill %>
-        <% end  %>
-      </div>
+    <div class="pet-flex">
+        <div class="pet-information">
+          <% if @pet.picture.attached? %>
+            <%= cl_image_tag @pet.picture.key, height: 300, width: 250, class: "pet-pic", crop: :fill %>
+          <% end  %>
+          <div class="pet-text">
+            <h3> Hello there, I am <%= @pet.name %> </h3>
+            <br>
+            <p> <em>About me:</em> <%= @pet.description %></p>
+            <p> <em>Species:</em> <%= @pet.species %> </p>
+            <p> <em>Address:</em> <%= @pet.address %> </p>
+            <p> <em>City:</em> <%= @pet.city %> </p>
+          </div>
+        </div>
 
-      <div class="pet-text">
-        <h2> <%= @pet.name %> </h2>
-        <p> Species: <%= @pet.species %> </p>
-        <p> Address: <%= @pet.address %> </p>
-        <p> City: <%= @pet.city %> </p>
-        <p> A little bit about me: <%= @pet.description %> </p>
-      </div>
+        <div class="appointment-form">
+          <h3>Schedule a Snuggle Session with <%= @pet.name %> </h3>
+          <%= simple_form_for([@pet, @appointment]) do |f| %>
+            <%= f.input :date %>
+            <%= f.input :start_time, as: :time, :minute_step => 15 %>
+            <%= f.input :end_time, as: :time, :minute_step => 15 %>
+            <%= f.input :message %>
+            <%= f.button :submit, "Schedule snuggle session", class: "btn btn-block" %>
+          <% end %>
+        </div>
     </div>
-
-    <div class="appointment-form">
-      <h3>Schedule a Snuggle Session with <%= @pet.name %> </h3>
-      <%= simple_form_for([@pet, @appointment]) do |f| %>
-        <%= f.input :date %>
-        <%= f.input :start_time, as: :time, :minute_step => 15 %>
-        <%= f.input :end_time, as: :time, :minute_step => 15 %>
-        <%= f.input :message %>
-        <%= f.button :submit, "Schedule snuggle session", class: "btn" %>
-      <% end %>
-    </div>
-  </div>
   <%= link_to "Back to all our pets", pets_path, class: "back" %>
 </div>
