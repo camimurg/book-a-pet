@@ -9,4 +9,17 @@
   justify-content: center;
   padding: 10px;
   font-family: "Rufina";
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.1)
+}
+
+.content-container {
+  min-height: 100vh;
+}
+
+.navbar-container{
+  position: fixed;
+  top: 0px;
+  margin: 0px;
+  width: 100%;
+
 }

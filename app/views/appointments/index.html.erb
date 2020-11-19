@@ -2,16 +2,19 @@
   <h2>All your appointments</h2>
   <div class="container-main">
     <% @appointments.each do |appointment| %>
-      <h3> <%= appointment.pet.name %> </h3>
-      <br>
-      <p> Date of the snuggle: <%= appointment.date.to_s(:long_ordinal) %> </p>
-      <br>
-      <p> Starting Time:  <%= appointment.start_time.strftime('%H:%M') %> </p>
-      <br>
-      <%= link_to "View", appointment_path(appointment) %>
-      <br>
-      <%= link_to "Delete", appointment_path(appointment), method: :delete %>
-      <br>
+      <div class="card-appointment" >
+        <h3> <%= appointment.pet.name %> </h3>
+        <div class="card-body">
+          <p> Date of the snuggle: <%= appointment.date.to_s(:long_ordinal) %> </p>
+          <p> Starting Time:  <%= appointment.start_time.strftime('%H:%M') %> </p>
+          <div class="btn">
+
+          <%= link_to "View", appointment_path(appointment) %>
+          </div>
+          <br>
+          <%= link_to "Delete", appointment_path(appointment), method: :delete %>
+        </div>
+      </div>
     <% end %>
 
   </div>
