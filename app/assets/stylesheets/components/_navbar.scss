@@ -1,7 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #FFF5CC;
+  background-color: rgba(251, 215, 74, 0.8);
   margin: 0;
+  font-family: 'Rufina', sans-serif;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,5 +10,11 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 100px;
+}
+
+.navbar-brand {
+  font-family: 'Rock Salt', cursive;
+  font-size: 18px;
+  color: #606882;
 }
