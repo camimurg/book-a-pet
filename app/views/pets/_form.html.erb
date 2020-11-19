@@ -1,11 +1,12 @@
-<%= simple_form_for(@pet) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :species, collection: Pet::SPECIES %>
-  <%= f.input :address %>
-  <%= f.input :city %>
-  <%= f.input :description %>
-  <%= f.input :picture, as: :file %>
-  <%= f.submit %>
-<% end %>
-
+<div class="container">
+  <%= simple_form_for(@pet) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :species, collection: Pet::SPECIES %>
+    <%= f.input :address %>
+    <%= f.input :city %>
+    <%= f.input :description %>
+    <%= f.input :picture, as: :file %>
+    <%= f.submit "Share Pet", class: "btn" %>
+  <% end %>
+</div>
 
