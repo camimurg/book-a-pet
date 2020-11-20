@@ -7,10 +7,10 @@
           <div class="pet-text">
             <h3> Hello there, I am <%= @pet.name %> </h3>
             <br>
-            <p> <em>About me:</em> <%= @pet.description %></p>
-            <p> <em>Species:</em> <%= @pet.species %> </p>
-            <p> <em>Address:</em> <%= @pet.address %> </p>
-            <p> <em>City:</em> <%= @pet.city %> </p>
+            <p> <strong>About me:</strong> <%= @pet.description %></p>
+            <p> <strong>Species:</strong> <%= @pet.species %> </p>
+            <p> <strong>Address:</strong> <%= @pet.address %> </p>
+            <p> <strong>City:</strong> <%= @pet.city %> </p>
           </div>
         </div>
 
@@ -25,5 +25,5 @@
           <% end %>
         </div>
     </div >
-  <%= link_to "Back to all our pets", pets_path, class: "btn-center" %>
+  <%= link_to "Back to all our pets", pets_path, class: "text-muted" %>
 </div>
