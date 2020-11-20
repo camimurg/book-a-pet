@@ -24,18 +24,18 @@
 }
 
 .card-box {
-  font-family: "Rufina";
+  font-family: 'Poppins', cursive;
   display: flex;
   justify-content: space-around;
   padding: 5px;
 }
 
+
 .card-text {
-  background-color: rgba(230, 250, 252, 0.7);
+  font-family: 'Poppins', cursive;
 }
 
 .card-link {
-  font-family: "Rufina";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -95,5 +95,17 @@
   border-radius: 30px;
   align-self: center;
   padding:20px;
+}
+
+.card-text-pet{
+  position: relative;
+  margin: 10px;
+  border-radius: 10px;
+  background: rgba(230, 250, 252, 0.7);
+  padding: 10px;
+  font-family: "Rufina";
+  flex-basis: 25%;
+  justify-content: center;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
 }
 

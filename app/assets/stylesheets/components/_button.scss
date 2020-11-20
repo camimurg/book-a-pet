@@ -4,6 +4,7 @@
   color: white;
   text-align: center;
   padding: 20px 50px;
+  font-family: 'Poppins', cursive;
   font-size: 18px;
 }
 
@@ -19,4 +20,21 @@
   padding: 5px;
   margin: 7px 145px;
   font-size: 11px;
+
+.btn-center {
+  background-color: #659157;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  display: table;
+  padding: 8px;
+  font-size: 16px;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.btn-center a {
+  color: white;
 }
