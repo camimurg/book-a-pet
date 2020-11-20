@@ -1,6 +1,6 @@
 <%= render 'shared/banner' %>
-<!-- <div class="container-title">
-  <h2>All our pets</h2>
+<!-- <div class="container-title>
+  <h2>All our amazing pets</h2>
 </div> -->
 <div class="container-pets-index">
 
@@ -12,10 +12,10 @@
         <% end %>
       </div>
       <div class="card-body">
-        <h3> <%=  pet.name %></h3>
+        <h3> <%= pet.name.capitalize %></h3>
         <div class="card-text-pet">
-          <p class="card-text">Species: <%= pet.species %> </p>
-          <p class="card-text">City: <%= pet.city %> </p>
+          <p class="card-text"> <strong>Species</strong>: <%= pet.species %> </p>
+          <p class="card-text"> <strong>City</strong>: <%= pet.city %> </p>
         </div>
       </div>
       <%= link_to "", pet_path(pet), class: 'card-link' %>

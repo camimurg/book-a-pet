@@ -5,7 +5,7 @@
       <% @appointments.each do |appointment| %>
       <div class="card-appointment" >
       <!-- <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" /> -->
-        <h3> <%= appointment.pet.name %> </h3>
+        <h3> <%= appointment.pet.name.capitalize %> </h3>
         <div class="card-body">
           <p> Date of the snuggle: <%= appointment.date.to_s(:long_ordinal) %> </p>
           <p> Starting Time:  <%= appointment.start_time.strftime('%H:%M') %> </p>
