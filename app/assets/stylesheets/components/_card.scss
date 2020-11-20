@@ -51,12 +51,15 @@
 .card-appointment {
   // width: 100%;
   position: relative;
-  margin: 15px;
+  // margin: 15px;
   border-radius: 10px;
   background: white;
   padding: 10px;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
-  width: 96%;
+  display: flex;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 .card-app-row {

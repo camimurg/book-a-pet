@@ -1,31 +1,28 @@
-<div class="container" >
-  <h2>All your appointments</h2>
+<div class="container-index-appointments" >
+  <h2 style="text-align: center; padding: 30px">All your Snuggle Sessions</h2>
     <!-- <div class="card-product"> -->
       <% @appointments.each do |appointment| %>
         <div class="card-appointment" >
-          <div class="card-app-row">
-            <div class="card-app-column">
-              <div class="card-image-pet">
-                <%= cl_image_tag appointment.pet.picture.key, height: 200, width: 200, crop: :fill %>
-              </div>
-            </div>
-          <div class="card-app-column">
-            <div class="card-body">
-              <p> Date of the snuggle: <%= appointment.date.to_s(:long_ordinal) %> </p>
-              <p> Start time:  <%= appointment.start_time.strftime('%H:%M') %> </p>
-              <p> End time:  <%= appointment.end_time.strftime('%H:%M') %> </p>
+          <div class="card-image-pet">
+            <%= cl_image_tag appointment.pet.picture.key, height: 200, width: 200, crop: :fill %>
+          </div>
 
-              <div class="btn-app">
+
+          <div class="card-body" style="margin-top: 28px">
+            <p> <%= appointment.pet.name %> </p>
+            <p> Date of the snuggle: <%= appointment.date.to_s(:long_ordinal) %> </p>
+            <p> Start time:  <%= appointment.start_time.strftime('%H:%M') %> </p>
+            <p> End time:  <%= appointment.end_time.strftime('%H:%M') %> </p>
+
+            <div class="btn-app">
                 <%= link_to "View Snuggle", appointment_path(appointment) %>
-              </div>
-              <div class="btn-app">
+            </div>
+            <div class="btn-app">
                 <%= link_to "Cancel Snuggle", appointment_path(appointment), method: :delete %>
-              </div>
             </div>
           </div>
         </div>
       <% end %>
-    <!-- </div> -->
 </div>
 
 <!-- ..
