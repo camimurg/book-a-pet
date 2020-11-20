@@ -1,9 +1,13 @@
+body {
+  background-color: rgba(230, 250, 252, 0.7);
+  margin: 0px;
+}
+
 .container-pets-index{
   display: flex;
   font-family: 'Poppins', cursive;
   justify-content: center;
   flex-wrap: wrap;
-
 }
 
 .container-main {
@@ -36,4 +40,5 @@
 .container-btn {
     display: flex;
 }
+
 
