@@ -2,28 +2,44 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  margin-bottom: 50px;
 }
 
 .banner h1 {
   margin: 0;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
   font-family: 'Poppins', cursive;
   font-size: 36px;
   text-align: left;
+  padding-top: 30px;
+}
+
+// .banner-title {
+//   padding-top: 50px;
+// }
+
+.form-control {
+  border-style: none;
+  display: block;
+  margin: auto;
+  background: rgba(255, 255, 255, 0);
 }
 
 .search-bar {
-  background: white;
+  background: rgba(255, 255, 255, 0.8);
   max-width: 600px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-self: center;
-  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // justify-self: center;
+  // align-self: center;
   margin: auto;
-  margin-top: 20px;
-  padding: 8px;
+  // margin-top: 16px;
+  // padding: 8px;
   border-radius: 50px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
 .box {
