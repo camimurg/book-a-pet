@@ -1,10 +1,10 @@
-  <div id="card-show-appo" class="card" style="width: 28%; margin: auto">
+  <div id="card-show-appo" class="card" style="width: 28%; margin: auto; margin-top: 30px">
     <div id="textappo">
-      <h2>Snuggle session with <%= @appointment.pet.name %> </h2>
-      <p> <%= @appointment.pet.description %> </p>
-      <p> ADDRESS: <%= @appointment.pet.address %> </p>
-      <p> DATE: <%= @appointment.date %> </p>
-      <p> TIME: From <%= @appointment.start_time.strftime('%H:%M') %> to <%= @appointment.end_time.strftime('%H:%M') %> </p>
+      <h2 style="font-family: 'Poppins'">Snuggle session with <%= @appointment.pet.name %> </h2>
+      <p style="font-family: 'Poppins'; font-size: 14px"> <%= @appointment.pet.description %> </p>
+      <p style="font-family: 'Poppins'"><strong> ADDRESS:</strong> <%= @appointment.pet.address %> </p>
+      <p style="font-family: 'Poppins'"><strong> DATE:</strong> <%= @appointment.date.to_s(:long_ordinal) %> </p>
+      <p style="font-family: 'Poppins'"><strong> TIME: From <%= @appointment.start_time.strftime('%H:%M') %> to <%= @appointment.end_time.strftime('%H:%M') %> </p>
     </div>
     <div id="imgappo">
       <div class="card-image-pet" style="width: 80%, text-align: center">
