@@ -1,6 +1,17 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,-0.6),rgba(0,0,0,-0.6)), url(<%= asset_url "banner.jpg"%>)">
   <div class="container">
-    <h1>Petsharing</h1>
+      <%= form_tag pets_path, class: "search-bar form-inline", method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a pet"
+        %>
+        <%= submit_tag "Search", class: "btn" %>
+      <% end %>
+
+    <div class="banner-title">
+      <h1>Petsharing</h1>
+    </div>
   </div>
 
   <!-- <div class="container d-flex">

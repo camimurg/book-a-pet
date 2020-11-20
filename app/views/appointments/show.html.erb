@@ -1,4 +1,15 @@
-<h2>Appointment with <%= @appointment.pet.name %> </h2>
-<p> <%= @appointment.pet.description %> </p>
-<p> <%= @appointment.pet.address %> </p>
-<p> From <%= @appointment.start_time.strftime('%H:%M') %> to <%= @appointment.end_time.strftime('%H:%M') %> </p>
+  <div id="card-show-appo" class="card" style="width: 28%; margin: auto">
+    <div id="textappo">
+      <h2>Snuggle session with <%= @appointment.pet.name %> </h2>
+      <p> <%= @appointment.pet.description %> </p>
+      <p> ADDRESS: <%= @appointment.pet.address %> </p>
+      <p> DATE: <%= @appointment.date %> </p>
+      <p> TIME: From <%= @appointment.start_time.strftime('%H:%M') %> to <%= @appointment.end_time.strftime('%H:%M') %> </p>
+    </div>
+    <div id="imgappo">
+      <div class="card-image-pet" style="width: 80%, text-align: center">
+        <%= cl_image_tag @appointment.pet.picture.key, height: 200, width: 200, crop: :fill %>
+      </div>
+    </div>
+  </div>
+

@@ -3,6 +3,12 @@ class PetsController < ApplicationController
 
   def index
     @pets = Pet.all
+    if params[:query].present?
+      sql_query = "species ILIKE :query OR city ILIKE :query"
+      @pets = Pet.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @pets = Pet.all
+    end
   end
 
   def show
@@ -18,7 +24,7 @@ class PetsController < ApplicationController
     @pet = Pet.new(pet_params)
     @pet.user = current_user
     if @pet.save
-      redirect_to pet_path(@pet), notice: "Pet added"
+      redirect_to pet_path(@pet)
     else
       render :new
     end
