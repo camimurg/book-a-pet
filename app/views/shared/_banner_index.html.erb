@@ -1,0 +1,12 @@
+<div class=" banner banner-index" style="background-image: linear-gradient(rgba(0,0,0,-0.6),rgba(0,0,0,-0.6)), url(<%= asset_url "banner_index.jpg"%>)">
+  <div class="container">
+      <%= form_tag pets_path, class: "search-bar form-inline", method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control searchbar",
+          placeholder: "Find a pet"
+        %>
+        <%= submit_tag "Search", class: "btn" %>
+      <% end %>
+  </div>
+</div>
