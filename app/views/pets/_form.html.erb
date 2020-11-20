@@ -1,13 +1,15 @@
-<div class="container my-5">
-  <h1 class="mb-3"> Pet sharing is caring 🦕</h1>
-  <%= simple_form_for(@pet) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :species, collection: Pet::SPECIES %>
-    <%= f.input :address %>
-    <%= f.input :city %>
-    <%= f.input :description %>
-    <%= f.input :picture, as: :file %>
-    <%= f.submit "Share your pet", class: "btn btn-block mt-3" %>
-  <% end %>
+<div class="container">
+  <div class="form">
+    <h1 class="mb-3"> Pet sharing is caring 🦕</h1>
+    <%= simple_form_for(@pet) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :species, collection: Pet::SPECIES %>
+      <%= f.input :address %>
+      <%= f.input :city %>
+      <%= f.input :description %>
+      <%= f.input :picture, as: :file %>
+      <%= f.submit "Share your pet", class: "btn btn-block mt-3" %>
+    <% end %>
+  </div>
 </div>
 
